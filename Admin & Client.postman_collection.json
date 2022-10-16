@@ -1,0 +1,678 @@
+{
+	"info": {
+		"_postman_id": "e4f2aa11-1f31-4d2d-979a-253b775c703b",
+		"name": "Admin & Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6492451"
+	},
+	"item": [
+		{
+			"name": "Registrant",
+			"item": [
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL2xvZ2luIiwiaWF0IjoxNjY0OTUyOTg0LCJleHAiOjE2NjQ5NTY1ODQsIm5iZiI6MTY2NDk1Mjk4NCwianRpIjoicDhrTU9ONTdmMjZieDNkWSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.U2mAAU0W2Coz0GGpsCtwt14CC7Lglp6E2lueuA-Q3ps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/registrants/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"registrants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL2xvZ2luIiwiaWF0IjoxNjY1MDExOTkxLCJleHAiOjE2NjUwMTU1OTEsIm5iZiI6MTY2NTAxMTk5MSwianRpIjoiS2VMSjE5bXlGMjhIOXc5NSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.YDIeo06O7LYrAVAMN7o-CEOpCuOFjBkyq-Vqh3l4RvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/registrants/2?include=user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"registrants",
+								"2"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL3JlZ2lzdGVyIiwiaWF0IjoxNjY0OTc4MTYyLCJleHAiOjE2NjQ5ODE3NjIsIm5iZiI6MTY2NDk3ODE2MiwianRpIjoiUUJobXdmMmdVQ0IwU0wyYSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lYFPSoS6N9tclHjZVYIkZdLV0258rrLhTU9CAN4EZ_U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"type\": \"registrants\",\r\n    \"attributes\": {\r\n            \"regFirstname\": \"regFirstname\",\r\n            \"regMiddlename\": \"r\",\r\n            \"regLastname\": \"regLastname\",\r\n            \"regBirthdate\": \"1990-10-05\",\r\n            \"regCivilstatus\": \"regCivilstatus\",\r\n            \"regReligion\": \"regReligion\",\r\n            \"regAddrLine1\": \"regAddrLine1\",\r\n            \"regAddrLine2\": \"regAddrLine2\",\r\n            \"regAddrTowncity\": \"regAddrTowncity\",\r\n            \"regAddrState\": \"regAddrState\",\r\n            \"regCountryCode\": 1234,\r\n            \"regProAddrLine1\": \"regProAddrLine1\",\r\n            \"regProAddrLine2\": \"regProAddrLine2\",\r\n            \"regProAddrTowncity\": \"regProAddrTowncity\",\r\n            \"regProAddrState\": \"regProAddrState\",\r\n            \"regProAddrCountry\": \"regProAddrCountry\",\r\n            \"regDatecreated\": \"2022-10-05T20:21:21.000000Z\",\r\n            \"regDatemodified\": \"2022-10-05T20:21:21.000000Z\"\r\n    },\r\n    \"relationships\": {\r\n      \"user\": {\r\n        \"data\":\r\n          {\r\n            \"type\": \"users\",\r\n            \"id\": \"1\"\r\n          }\r\n      }\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/registrants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"registrants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL3JlZ2lzdGVyIiwiaWF0IjoxNjY0OTc4MTYyLCJleHAiOjE2NjQ5ODE3NjIsIm5iZiI6MTY2NDk3ODE2MiwianRpIjoiUUJobXdmMmdVQ0IwU0wyYSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lYFPSoS6N9tclHjZVYIkZdLV0258rrLhTU9CAN4EZ_U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"type\": \"registrants\",\r\n    \"id\": \"1\",\r\n    \"attributes\": {\r\n            \"regFirstname\": \"updated\",\r\n            \"regMiddlename\": \"u\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/registrants/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"registrants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL3JlZ2lzdGVyIiwiaWF0IjoxNjY0OTc4MTYyLCJleHAiOjE2NjQ5ODE3NjIsIm5iZiI6MTY2NDk3ODE2MiwianRpIjoiUUJobXdmMmdVQ0IwU0wyYSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lYFPSoS6N9tclHjZVYIkZdLV0258rrLhTU9CAN4EZ_U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"type\": \"registrants\",\r\n    \"id\": \"1\",\r\n    \"attributes\": {\r\n            \"regFirstname\": \"updated\",\r\n            \"regMiddlename\": \"u\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/registrants/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"registrants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Auth",
+			"item": [
+				{
+					"name": "register",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"zoren.lumosbog@remotestaff.com\",\r\n  \"password\": \"Zoren1lumosbog@remotestaff.com\",\r\n  \"password_confirmation\": \"Zoren1lumosbog@remotestaff.com\",\r\n  \"ip_addr\": \"49.147.115.69\",\r\n  \"date_submitted\": \"2022-10-06T20:21:21.000000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"zoren.lumosbog@remotestaff.com\",\r\n    \"password\": \"Zoren1lumosbog@remotestaff.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL3JlZ2lzdGVyIiwiaWF0IjoxNjY0OTMyOTI2LCJleHAiOjE2NjQ5MzY1MjYsIm5iZiI6MTY2NDkzMjkyNiwianRpIjoieVJOOHFKZzBQcFdhS2FzViIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SNff0kx5zkrmIJD7KB8TZ6YnP55irTJtxY2ce4eZJnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL2xvZ2luIiwiaWF0IjoxNjY1MDExMjA5LCJleHAiOjE2NjUwMTQ4MDksIm5iZiI6MTY2NTAxMTIxMCwianRpIjoiRE1UM3Z1R2JUR0o1VFlhMyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.uaLUfwLeRWHIakEL6mLzT8gbsm2ekI-2oS3nTLh6ptA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "email-verification-notification",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL3JlZnJlc2giLCJpYXQiOjE2NjQ5MzMwOTgsImV4cCI6MTY2NDkzNjcwOCwibmJmIjoxNjY0OTMzMTA4LCJqdGkiOiJDOEw1NVNIeUdKV202d1BjIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.cUZae_CrPL_ceTyIkr1v81jHnWbuuA8TS4XyFHaBaC8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/email/verification-notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"email",
+								"verification-notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL3VzZXJzL3JlZnJlc2giLCJpYXQiOjE2NjQ5MzMwOTgsImV4cCI6MTY2NDkzNjcwOCwibmJmIjoxNjY0OTMzMTA4LCJqdGkiOiJDOEw1NVNIeUdKV202d1BjIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.cUZae_CrPL_ceTyIkr1v81jHnWbuuA8TS4XyFHaBaC8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/verify-email/1/249667ade13c93dda90a56db2b78d30c738d1d2d?expires=1664936719&signature=87acb0244f188455a63e157236effd84cbba5544179252554759410edd4bb7a6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"verify-email",
+								"1",
+								"249667ade13c93dda90a56db2b78d30c738d1d2d"
+							],
+							"query": [
+								{
+									"key": "expires",
+									"value": "1664936719"
+								},
+								{
+									"key": "signature",
+									"value": "87acb0244f188455a63e157236effd84cbba5544179252554759410edd4bb7a6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot-password",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"zoren.lumosbog@remotestaff.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"18ec50398fdb78c5c5e3fd2391a7a5cca85129e226f7f61ab01722d10472242f\",\r\n    \"email\": \"zoren.lumosbog@remotestaff.com\",\r\n    \"password\": \"Zoren2lumosbog@remotestaff.com\",\r\n    \"password_confirmation\": \"Zoren2lumosbog@remotestaff.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
